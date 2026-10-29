@@ -17,13 +17,27 @@ I'm building a robotic arm to learn by making: understanding mechanical loads, c
 
 ### V1 — Cardboard proof of concept
 
+![First cardboard prototype](images/v1-carton.jpg)
+
+![Electronics learning kit](images/kit-electronique.jpg)
+
 I laminated thin cardboard to create a rigid structure. The unintended weight of the cardboard and glue was too much for the SG90 servos. Mounting the motors without permanently gluing them was another challenge. I kept the prototype to two motions, rotation and inclination, and used it to study the ESP32 and basic electronics.
 
 ### V2 — Learning from an existing design
 
+![3D-printed second prototype](images/v2-bras.jpg)
+
+![Assembly and wiring of V2](images/v2-assemblage.jpg)
+
 I **did not design the geometry of V2**. I found a 3D model online and printed, assembled, wired and programmed it myself. Coordinating four motors exposed a major electrical mistake: powering multiple servos from the ESP32 was unsuitable. This pushed the project toward dedicated motor power and a common ground.
 
 ### V3 — My own mechanical design
+
+![Custom 3D-printed V3 robotic arm](images/v3-bras.jpg)
+
+![V3 joints and mechanical structure](images/v3-articulations.jpg)
+
+![ESP32, servo controller and joystick wiring](images/v3-electronique.jpg)
 
 I designed the arm in **Fusion 360**, printed the parts in **PETG** using a **Bambu Lab A1**, and moved to a separate **6 V laboratory supply** for servo power, an **ESP32**, a **PCA9685** (16-channel PWM controller), and an analog joystick.
 
@@ -61,9 +75,15 @@ The target design has **five motorized arm/wrist axes plus a future gripper func
 - [ ] Explore integration with my **OSIRIS** personal application
 - [ ] Study a V4 with bearings, passive shafts, transmissions, metal components and custom electronics
 
+## Project files
+
+- [V3 Arduino / C++ firmware](firmware/sketch_sep6a.ino)
+- [Fusion 360 design archive](cad/ARM-v2.1.f3z)
+- [V3 technical architecture](docs/architecture-v3.md)
+
 ## Repository material
 
-The source files and build photographs are being collected and organized. Full technical notes and measured specifications will be added progressively. **The V2 design comes from a third party and will not be redistributed without checking its source and license.**
+The photographs, experimental Arduino firmware and Fusion 360 archive are now available in this repository. Measured performance data and additional technical notes will be added as the project progresses. **The V2 design comes from a third party and will not be redistributed without checking its source and license.**
 
 **Author:** Alexandre Goulhot-Lassalle  
 *Project documentation — October 2026.*
